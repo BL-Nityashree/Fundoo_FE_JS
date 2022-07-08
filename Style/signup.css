@@ -1,0 +1,214 @@
+.outer{
+    /* border: 2px solid red; */
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    border: 1px solid rgb(230, 224, 224);
+    width: 40%;
+    height: 65%;
+    padding: 10px;
+    padding-top: 20px;
+    
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    
+}
+.regForm{
+    /* border: 1px solid blue; */
+    width: 60%;
+    padding-top: 20px;
+ 
+}
+.image{
+    /* border: 1px solid blue; */
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:center;
+    padding-top: 100px;
+}
+.fcolor{
+    color: blue;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.ucolor{
+    color: red;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.ncolor{
+    color: green;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.regForm p{
+    margin-top: 10px;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.names{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid pink; */
+    /* height: 60px; */
+}
+.inputFDiv{
+    width: 47%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px;
+    padding-left: 5px;
+}
+.inputLDiv{
+    width: 47%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+}
+#firstName {
+    border: none;
+    outline:none!important;
+    height: 30px;
+}
+#lastName {
+    border: none;
+    outline:none!important;
+    height: 30px;
+}
+.inputUDiv{
+    width: 92%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 25px;
+}
+#userName {
+    border: none;
+    outline:none!important;
+    height: 30px;
+    width: 95%;
+}
+.inputPDiv{
+    width: 47%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+}
+.inputCPDiv{
+    width: 47%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+}
+#password {
+    border: none;
+    outline:none!important;
+    height: 30px;
+}
+#cpassword {
+    border: none;
+    outline:none!important;
+    height: 30px;
+}
+#usernameHint{
+    font-size: 12px;
+    color: grey;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+a{
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+a:hover{
+    background-color: rgb(236, 236, 245);
+    cursor: pointer;
+}
+.psw{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid pink; */
+    /* height: 60px; */
+    margin-top: 35px;
+}
+#passwordHint{
+    font-size: 12px;
+    color: grey;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+#nameshint{
+    font-size: 12px;
+    color: grey;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+#showbox{
+    /* border:1px solid black; */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 20px;
+}
+#showbox:hover{
+    background-color: rgb(211, 205, 205);
+    cursor: pointer;
+}
+.check{
+    margin-left: 10px;
+    /* border: 2px solid blue; */
+    height: 50px;
+   
+    display: flex;
+    align-items: center;
+}
+.buttons{
+    /* border:2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    margin-top: 60px;
+}
+.next{
+    background-color: blue;
+    border: none;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+#info{
+    font-size: 18px;
+    margin: 0px;
+    color: grey;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+}
+.formError{
+    border: 2px solid red;
+        width: 47%;
+        border-radius: 5px;
+        height: 35px;
+        padding-left: 5px;
+    
+}

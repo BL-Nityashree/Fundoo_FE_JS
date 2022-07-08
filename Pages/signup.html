@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundooNotes</title>
+    <link rel="stylesheet" href="../Style/signup.css">
+    <script type="text/javascript" src="../Scripts/signup.js"></script>
+</head>
+
+<body>
+    <div class="outer">
+
+        <div class="inner">
+            <div class="regForm">
+                <div>
+                    <span class="fcolor">F</span>
+                    <span class="ucolor">U</span>
+                    <span class="ncolor">N</span>
+                    <span class="fcolor">D</span>
+                    <span class="ucolor">O</span>
+                    <span class="ncolor">O</span>
+                </div>
+                <p>Create your Fundoo Account</p>
+                <div class="names">
+                    <div class="inputFDiv" id="fid">
+                        <input id="firstName" type="text" placeholder="First Name" >
+                    </div>
+                    <div class="inputLDiv">
+                        <input id=lastName type="text" placeholder="Last Name">
+                    </div>
+                </div>
+                <p id="nameshint"></p>
+                <div class="inputUDiv">
+                    <input id="userName" type="text" placeholder="User Name">
+                </div>
+                <p id="usernameHint">You can use letters, numbers and periods</p>
+                <a>Use my current email address instead</a>
+
+                <div class="psw">
+                    <div class="inputPDiv">
+                        <input id="password" type="text" placeholder="Password">
+                    </div>
+                    <div class="inputCPDiv">
+                        <input id=cpassword type="text" placeholder="Confirm">
+                    </div>
+                </div>
+                <p id="passwordHint">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+                <div class="check">
+                    <div id="showbox">
+                        <input type="checkbox"  name="vehicle1" value="Bike">
+                    </div>
+                    
+                    <label>Show password</label>
+                </div>
+
+                <div class="buttons">
+                    <a class="signin">Sign in Instead</a>
+                    <button  class="next" onclick="close();">Next</button>
+    
+                </div>
+            </div>
+
+           
+
+
+            <div class="image">
+                <img src="../assets/account.svg" alt="">
+                <p id="info">One Account. All of Fundoo</p>
+                <p id="info">Working for you.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
