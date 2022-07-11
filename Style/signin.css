@@ -7,8 +7,8 @@
 }
 .inner{
     border: 1px solid rgb(230, 224, 224);
-    width: 40%;
-    height: 65%;
+    width: 25%;
+    height: auto;
     padding: 10px;
     padding-top: 20px;
     
@@ -20,18 +20,13 @@
 }
 .regForm{
     /* border: 1px solid blue; */
-    width: 60%;
+    width: 90%;
     padding-top: 20px;
- 
-}
-.image{
-    /* border: 1px solid blue; */
-    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items:center;
-    padding-top: 100px;
+    align-items: center;
+ 
 }
 .fcolor{
     color: blue;
@@ -51,43 +46,19 @@
     font-size: 24px;
     font-weight: 400;
 }
-.regForm p{
+.sign-in{
     margin-top: 10px;
     font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
     font-size: 24px;
     font-weight: 400;
 }
-.names{
-    width: 93%;
-    display: flex;
-    justify-content: space-between;
-    /* border: 2px solid pink; */
-    /* height: 60px; */
+.sent{
+    margin-top: -7px;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
-.inputFDiv{
-    width: 47%;
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 35px;
-    padding-left: 5px;
-}
-.inputLDiv{
-    width: 47%;
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 35px; 
-    padding-left: 5px;
-}
-#firstName {
-    border: none;
-    outline:none!important;
-    height: 30px;
-}
-#lastName {
-    border: none;
-    outline:none!important;
-    height: 30px;
-}
+
 .inputUDiv{
     width: 92%;
     border: 1px solid grey;
@@ -103,19 +74,14 @@
     width: 95%;
 }
 .inputPDiv{
-    width: 47%;
+    width: 92%;
     border: 1px solid grey;
     border-radius: 5px;
     height: 35px; 
     padding-left: 5px;
+    margin-top: 15px;
 }
-.inputCPDiv{
-    width: 47%;
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 35px; 
-    padding-left: 5px;
-}
+
 #password {
     border: none;
     outline:none!important;
@@ -129,15 +95,37 @@
 #usernameHint{
     font-size: 12px;
     color: grey;
-    margin-left: 8px;
+    margin-right: 300px;
     margin-top: 2px;
 }
-a{
+#passwordHint{
+    font-size: 12px;
+    color: grey;
+    margin-right: 300px;
+    margin-top: 2px;
+}
+.signin{
     color: blue;
     padding: 5px;
     border-radius: 5px;
 }
-a:hover{
+.signin:hover{
+    background-color: rgb(236, 236, 245);
+    cursor: pointer;
+}
+.msg{
+    margin-top: 40px;
+    color: gray;
+    font-size: 15px;
+    margin-left: 4px;
+}
+.tags{
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: -20px;
+}
+.tags:hover{
     background-color: rgb(236, 236, 245);
     cursor: pointer;
 }
@@ -184,11 +172,12 @@ a:hover{
     align-items: center;
 }
 .buttons{
-    /* border:2px solid red; */
+     /* border:2px solid red;  */
     display: flex;
     justify-content: space-between;
-    width: 92%;
-    margin-top: 60px;
+    width: 98%;
+    margin-top: 40px;
+    margin-bottom: 70px;
 }
 .next{
     background-color: blue;
@@ -206,10 +195,11 @@ a:hover{
 }
 .formError{
     border: 2px solid red;
-        width: 47%;
-        border-radius: 5px;
-        height: 35px;
-        padding-left: 5px;
+    width: 92%;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 15px;
     
 }
 .userError{
@@ -219,4 +209,8 @@ a:hover{
     height: 35px; 
     padding-left: 5px;
     margin-top: 25px;
+}
+.data{
+    border: greenyellow;
+    width: 98%;
 }

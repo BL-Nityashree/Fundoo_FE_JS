@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function(){
-    console.log("hello js is linked =================");
+   
 
     let regexName = RegExp('^[A-Z]{1}[a-z]{2,}$');
-    let regexLName = RegExp('^[A-Z]{1}[a-z]{2,}$');
+    let regexLName = RegExp('^[A-Z]{1}[a-z]{0,}$');
     let regexEmail = RegExp('^[a-z]{2,}[@][a-z]{2,5}[.][a-z]{3}$');
     let regexPass = RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#]*)[a-zA-Z0-9@!#*]{8,}$');
 
@@ -11,13 +11,11 @@ window.addEventListener('DOMContentLoaded', function(){
     let uName=document.getElementById('userName');
     let pswd=document.getElementById('password');
     let cpswd=document.getElementById('cpassword');
-    let nh=document.getElementById('nameshint');
-    let fid=document.getElementById('fid');
-    let a;
-    let b;
-    let c;
-    let d;
-    let e;
+    let nxt=document.getElementById('btn');
+    
+    let a, b,c,d,e;
+    let fn=0,ln=0,em=0,psw=0,cpsw=0;
+    
 
     // const showError = (input, message, e) => {
     //     console.log(message);
@@ -37,38 +35,83 @@ window.addEventListener('DOMContentLoaded', function(){
         document.getElementById(divid).classList.remove(oldcls);
         document.getElementById(divid).classList.add(newcls)
         document.getElementById(input).innerHTML = message;
-        document.getElementById(input).style.color="red"
+        document.getElementById(input).style.color="red";
+        return false;
       };
       
       const showSuccess = (input,oldcls,newcls,divid) => {
         document.getElementById(input).textContent = "";
         document.getElementById(divid).classList.add(oldcls);
-        document.getElementById(divid).classList.remove(newcls)
+        document.getElementById(divid).classList.remove(newcls);
+        return true;
       };
 
       fName.addEventListener('keyup', ()=>{
-        // if (!regexName.test(fName.value)) {
-        //     console.log("inside if");
-        //     showError(nh, "Enter first and last name", fid);
-        //   } else {
-        //     console.log("inside else");
-        //     showSuccess(nh, fid);
-           
-        //   }
-        check(fName,'nameshint','inputFDiv','formError','fid',regexName)
-
-      })
+        fn=check(fName,'nameshint','inputFDiv','formError','fid',regexName)
+        console.log(fn);
+      });
+      lName.addEventListener('keyup', ()=>{
+        ln=check(lName,'nameshint','inputLDiv','formError','lid',regexLName)
+        console.log(ln);
+      });
+      uName.addEventListener('keyup', ()=>{
+        em=check(uName,'usernameHint','inputUDiv','userError','uid',regexEmail)
+        console.log(em);
+      });
+      pswd.addEventListener('keyup', ()=>{
+        psw=check(pswd,'passwordHint','inputPDiv','formError','pid',regexPass)
+        console.log(psw);
+      });
+      cpswd.addEventListener('keyup', ()=>{
+        cpsw=check(cpswd,'passwordHint','inputCPDiv','formError','cpid',regexPass)
+        console.log(cpsw);
+      });
    function check(inputid,errid,oldcls,newcls,divid,reg){
     if (!reg.test(inputid.value)) {
-        showError(errid, "Enter valid data", oldcls, newcls,divid);
+        a = showError(errid, "Enter valid data", oldcls, newcls,divid);
+        console.log(a);
+        return 0;
       } else {
-        showSuccess(errid, oldcls, newcls,divid);
-       
+        a= showSuccess(errid, oldcls, newcls,divid);
+        console.log(a);
+        return 1;
       }
-
    };
-   function close(){
-       console.log("this is close");
-   }
+console.log("this is close");
+   nxt.addEventListener('click',()=>{
+    // 
+    if((fn==1)&&(ln==1)&&(em==1)&&(psw==1)&&(cpsw==1)){
+      console.log("inside if");
+      let data={
+        firstName:fName.value,
+        lastName:lName.value,
+        email:uName.value,
+        password:pswd.value,
+        service:"advance"
+      }
+      console.log(data);
+      $.ajax({
+        url: 'http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp',
+        type: 'POST',
+        data:data,
+        'Content-Type': 'application/json',
+        // headers: {
+        //    'Authorization': 'Bearer <token>'
+        // },
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (error) {
+          console.log(error);
+        }
+     });
+    }else{
+      showError('nameshint',"Enter valid data",'inputFDiv','formError','fid');
+      showError('nameshint',"Enter valid data",'inputLDiv','formError','lid')
+      showError('usernameHint',"Enter valid data",'inputUDiv','userError','uid')
+      showError('passwordHint',"Enter valid data",'inputPDiv','formError','pid')
+      showError('passwordHint',"Enter valid data",'inputCPDiv','formError','cpid')
+    }
+   })
     
  })

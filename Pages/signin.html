@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<bu>, initial-scale=1.0">
     <title>Document</title>
     <script src="../Scripts/signin.js"></script>
+    <link rel="stylesheet" href="../Style/signin.css">
 </head>
+
 <body>
-    <button onclick="close();">close</button>
+    <div class="outer">
+
+        <div class="inner">
+            <div class="regForm">
+                <div>
+                    <span class="fcolor">F</span>
+                    <span class="ucolor">U</span>
+                    <span class="ncolor">N</span>
+                    <span class="fcolor">D</span>
+                    <span class="ucolor">O</span>
+                    <span class="ncolor">O</span>
+                </div>
+                <p class="sign-in">Sign In</p>
+                <p class="sent">Use your Fundoo Account</p>
+
+                <div class="inputUDiv" id="uid">
+                    <input id="userName" type="text" placeholder="User Name">
+                </div>
+                <p id="usernameHint">Enter valid Data</p>
+
+                <div class="inputPDiv" id="pid">
+                    <input id="userName" type="text" placeholder="Password">
+                </div>
+                <p id="passwordHint">Enter valid Data</p>
+                <div class="data">
+                    <a class="tags">Forgot Password?</a>
+                    <p class="msg">Not your computer? Use Guest mode to sign in privately.</p>
+                    <a class="tags">Learn more</a>
+                </div>
+
+
+                <div class="buttons">
+                    <a class="signin">Create account</a>
+                    <button class="next" id="btn">Next</button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </body>
+
 </html>

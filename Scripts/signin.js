@@ -1,5 +1,9 @@
-console.log("close");
+window.addEventListener('DOMContentLoaded', function(){
 
-function close(){
-    console.log("this is close");
-}
+
+let uName=document.getElementById('userName');
+
+uName.addEventListener('keyup', ()=>{
+    console.log(uName.value);
+})
+})

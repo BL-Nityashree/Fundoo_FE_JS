@@ -8,6 +8,7 @@
     <title>FundooNotes</title>
     <link rel="stylesheet" href="../Style/signup.css">
     <script type="text/javascript" src="../Scripts/signup.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -28,22 +29,22 @@
                     <div class="inputFDiv" id="fid">
                         <input id="firstName" type="text" placeholder="First Name" >
                     </div>
-                    <div class="inputLDiv">
+                    <div class="inputLDiv" id="lid">
                         <input id=lastName type="text" placeholder="Last Name">
                     </div>
                 </div>
                 <p id="nameshint"></p>
-                <div class="inputUDiv">
+                <div class="inputUDiv" id="uid">
                     <input id="userName" type="text" placeholder="User Name">
                 </div>
                 <p id="usernameHint">You can use letters, numbers and periods</p>
                 <a>Use my current email address instead</a>
 
                 <div class="psw">
-                    <div class="inputPDiv">
+                    <div class="inputPDiv" id="pid">
                         <input id="password" type="text" placeholder="Password">
                     </div>
-                    <div class="inputCPDiv">
+                    <div class="inputCPDiv" id="cpid">
                         <input id=cpassword type="text" placeholder="Confirm">
                     </div>
                 </div>
@@ -58,7 +59,7 @@
 
                 <div class="buttons">
                     <a class="signin">Sign in Instead</a>
-                    <button  class="next" onclick="close();">Next</button>
+                    <button  class="next" id="btn">Next</button>
     
                 </div>
             </div>
