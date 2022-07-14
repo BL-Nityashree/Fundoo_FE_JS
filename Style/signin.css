@@ -86,6 +86,7 @@
     border: none;
     outline:none!important;
     height: 30px;
+    width: 95%;
 }
 #cpassword {
     border: none;
