@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function () {
   let uName = document.getElementById('userName');
   let psw = document.getElementById('password');
   let nxt = document.getElementById('btn');
+  let signin=document.getElementById('sign')
   let a, em = 0, pswd = 0;
 
   const showError = (input, message, oldcls, newcls, divid) => {
@@ -55,18 +56,20 @@ window.addEventListener('DOMContentLoaded', function () {
       $.ajax({
         url: 'http://fundoonotes.incubation.bridgelabz.com/api/user/login',
         type: 'POST',
-        data: data,
-        'Content-Type': 'application/json',
-        // headers: {
-        //    'Authorization': 'Bearer <token>'
-        // },
+        data: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        },
         success: function (result) {
           console.log(result);
+          localStorage.setItem('token',result.id)
+          window.location.href = '../Pages/dashboard.html';
         },
         error: function (error) {
           console.log(error);
         }
       });
+     
     } else {
       if ((em == 0) && (pswd == 1)) {
         showError('usernameHint', "Enter valid data", 'inputUDiv', 'formError', 'uid');
@@ -81,4 +84,30 @@ window.addEventListener('DOMContentLoaded', function () {
 
     }
   })
+
+  // signin.addEventListener('click', ()=>{
+  //   let req= {
+  //     "noteIdList":["629ecb8509b9c0001e555dbf"], 
+  //     "isArchived": true
+  //   }
+  //   let token=localStorage.getItem('token');
+  //   $.ajax({
+  //     url: 'http://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList',
+  //     type: 'GET',
+  //     // data:JSON.stringify(req),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //        'Authorization': token, 
+  //     },
+  //     success: function (result) {
+  //       console.log(result);
+       
+  //     },
+  //     error: function (error) {
+  //       console.log(error);
+  //     }
+  //   });
+  // })
+
+ 
 })

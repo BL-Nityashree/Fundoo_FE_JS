@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function(){
     let cpswd=document.getElementById('cpassword');
     let nxt=document.getElementById('btn');
     
-    let a, b,c,d,e;
+    let a;
     let fn=0,ln=0,em=0,psw=0,cpsw=0;
     
 
@@ -48,7 +48,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
       fName.addEventListener('keyup', ()=>{
         fn=check(fName,'nameshint','inputFDiv','formError','fid',regexName)
-        console.log(fn);
+        console.log("first name",fn);
+        
       });
       lName.addEventListener('keyup', ()=>{
         ln=check(lName,'nameshint','inputLDiv','formError','lid',regexLName)
@@ -66,14 +67,15 @@ window.addEventListener('DOMContentLoaded', function(){
         cpsw=check(cpswd,'passwordHint','inputCPDiv','formError','cpid',regexPass)
         console.log(cpsw);
       });
+
    function check(inputid,errid,oldcls,newcls,divid,reg){
     if (!reg.test(inputid.value)) {
         a = showError(errid, "Enter valid data", oldcls, newcls,divid);
-        console.log(a);
+        console.log("show error value",a);
         return 0;
       } else {
         a= showSuccess(errid, oldcls, newcls,divid);
-        console.log(a);
+        console.log("show success value",a);
         return 1;
       }
    };
@@ -89,6 +91,8 @@ console.log("this is close");
         password:pswd.value,
         service:"advance"
       }
+
+    
       console.log(data);
       $.ajax({
         url: 'http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp',

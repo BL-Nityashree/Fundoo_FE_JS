@@ -136,6 +136,7 @@ a{
     color: blue;
     padding: 5px;
     border-radius: 5px;
+    text-decoration: none;
 }
 a:hover{
     background-color: rgb(236, 236, 245);
